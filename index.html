@@ -19,8 +19,8 @@
       <div id="view-high-scores" class="mt-2">
         View High Scores
       </div>
-      <div id="timer-div" class="mt-2" style="visibility: hidden;">
-        Time: <span id="timer"></span>
+      <div id="timer-div" class="mt-2">
+        Time: <span id="timer">0</span>
       </div>
     </div>
   </header>
@@ -29,11 +29,32 @@
       <h1 class="text-center">Coding Quiz Challenge</h1>
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-          <p>Welcome to the Javascript coding quiz! You will be presented with a series of multiple-choice
-            questions on Javascript fundamentals. You will start with 75 seconds on the clock. Every wrong
-            answer will subtract 10 seconds. You will be scored based on the amount of time left on the
-            clock at the end. Good luck!</p>
+          <p>Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score/time by ten seconds!</p>
           <button id="start-btn" class="btn quiz-btn">Start Quiz</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Complete page -->
+    <section id="complete-page" style="display: none;">
+      <h1 class="text-center">Quiz Complete!</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p>Your final score was <span id="final-score">0</span></p>
+          <p>Enter your initials for the score board:</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form id="submit-score-form" class="input-group d-flex justify-content-center">
+            <span class="input-group-text"><input id="init-enter" type="text" maxlength="3" size="3"
+                placeholder="Initials"></span>
+            <button id="submit-score-btn" class="btn quiz-btn" type="submit">Submit Score</button>
+          </form>
         </div>
       </div>
     </section>
