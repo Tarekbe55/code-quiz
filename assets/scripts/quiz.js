@@ -1,28 +1,28 @@
 var questionList = [
   {
-    question: "All lines should be terminated with a ________",
-    answers: ["semicolon", "period", "ampersand", "backslash"],
-    correctAnswer: 1
+    question: "Commonly used data types DO NOT include:",
+    answers: ["strings", "booleans", "alerts", "numbers"],
+    correctAnswer: 3
   },
   {
-    question: "Which of these variable types can be stored in arrays?",
-    answers: ["numbers", "strings", "booleans", "all of the above"],
+    question: "The condition in an if / else statement is enclosed within ____.",
+    answers: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    correctAnswer: 3
+  },
+  {
+    question: "Arrays in JavaScript can be used to store ____.",
+    answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
     correctAnswer: 4
   },
   {
-    question: "What character is used to bracket the contents of an array?",
-    answers: ["quotation mark", "square bracket", "curly bracket", "angle bracket"],
-    correctAnswer: 2
+    question: "String values must be enclosed within ____ when being assigned to variables.",
+    answers: ["commas", "curly brackets", "quotes", "parentheses"],
+    correctAnswer: 3
   },
   {
-    question: "Which of these functions displays a message to the user with only an 'OK' button?",
-    answers: ["prompt()", "confirm()", "check()", "alert()"],
+    question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answers: ["JavaScript", "terminal / bash", "for loops", "console.log"],
     correctAnswer: 4
-  },
-  {
-    question: "What function do you call to print something to the console?",
-    answers: ["console.log()", "console()", "log()", "print()"],
-    correctAnswer: 1
   },
   {
     question: "Which of the following will check if the variable 'x' is equal in both value and type to the variable 'y'?",
