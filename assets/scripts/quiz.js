@@ -205,3 +205,44 @@ viewScoresDiv.addEventListener("click", function () {
   showScores();
 })
 
+/* Add listener to 'Return' button to reinitialize to start condition */
+returnBtn.addEventListener("click", initializePage);
+
+/* Add listener to 'Submit Score' form to add score to storage and open score page */
+submitScoreForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (initialInput.value != "") {
+    /* add initials & score to score array */
+    var newScore = {
+      initials: initialInput.value,
+      score: currentTime
+    }
+    scoreList.push(newScore);
+
+    /* Sort new array to keep scores in order */
+    scoreList.sort(function (a, b) {
+      if (a.score < b.score) {
+        return 1
+      } else if (a.score > b.score) {
+        return -1;
+      } else {
+        return 0;
+      }
+    })
+
+    /* Store new scores list in local storage */
+    localStorage.setItem("highScores", JSON.stringify(scoreList));
+    hideID("complete-page");
+    showScores();
+  }
+})
+
+/* Clear score function */
+clearScoresBtn.addEventListener("click", function (event) {
+  event.target.blur();
+  localStorage.removeItem("highScores");
+  showScores();
+})
+
+/* Initialization */
+loadScores();
