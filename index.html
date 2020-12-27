@@ -3,14 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Code Quiz</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <title>Javascript Code Quiz</title>
   <link rel="stylesheet" href="assets/style/style.css">
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -25,6 +22,7 @@
     </div>
   </header>
   <main class="container">
+    <!-- Front page-->
     <section id="start-page">
       <h1 class="text-center">Coding Quiz Challenge</h1>
       <div class="row justify-content-center">
@@ -37,9 +35,38 @@
       </div>
     </section>
 
+    <!-- Question -->
+    <section id="question-page" style="display: none;">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p id="question-text" class="text-center"></p>
+        </div>
+      </div>
+      <div id="answer-btns">
+        <div class="row mb-1 justify-content-center">
+          <div class="col-xs-8 col-sm-6 col-lg-4">
+            <button id="answer-btn-1" class="btn quiz-btn"></button>
+          </div>
+        </div>
+        <div class="row mb-1 justify-content-center">
+          <div class="col-xs-8 col-sm-6 col-lg-4">
+            <button id="answer-btn-2" class="btn quiz-btn"></button>
+          </div>
+        </div>
+        <div class="row mb-1 justify-content-center">
+          <div class="col-xs-8 col-sm-6 col-lg-4">
+            <button id="answer-btn-3" class="btn quiz-btn"></button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xs-8 col-sm-6 col-lg-4">
+            <button id="answer-btn-4" class="btn quiz-btn"></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    <!-- Complete page -->
+    <!-- complete page -->
     <section id="complete-page" style="display: none;">
       <h1 class="text-center">Quiz Complete!</h1>
       <div class="row justify-content-center">
@@ -58,3 +85,10 @@
         </div>
       </div>
     </section>
+
+
+  </main>
+  <script src="assets/scripts/quiz.js"></script>
+</body>
+
+</html>

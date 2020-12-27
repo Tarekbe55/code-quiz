@@ -1,3 +1,7 @@
+body {
+background-color: rgb(169, 209, 224);
+
+}
 h1 {
   font-size: 2rem;
 }
@@ -9,7 +13,7 @@ p {
 
 /* Modified styling for all buttons */
 .quiz-btn {
-  background-color:#550055;
+  background-color:#a56012;
   color: white;
 }
 
@@ -31,7 +35,7 @@ p {
 /* View High Scores div, acting as psuedo-link */
 #view-high-scores {
   font-weight: bold;
-  color:#550055;
+  color:#a56012;
   cursor:pointer;
 }
 
