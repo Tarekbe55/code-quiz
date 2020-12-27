@@ -118,3 +118,25 @@ function updateTimer(adjust) {
 function loadScores() {
   scoreList = JSON.parse(localStorage.getItem("highScores")) || [];
 }
+
+/* High score page */
+function showScores() {
+  loadScores();
+
+  /* High score table updates */
+  scoreTableBody.innerHTML = "";
+  for (var i = 0; i < scoreList.length; i++) {
+    var tableRow = document.createElement("tr");
+    var initialsData = document.createElement("td");
+    var scoreData = document.createElement("td");
+
+    initialsData.textContent = scoreList[i].initials;
+    scoreData.textContent = scoreList[i].score;
+
+    tableRow.append(initialsData);
+    tableRow.append(scoreData);
+
+    scoreTableBody.append(tableRow);
+  }
+  showID("high-score-page");
+}
