@@ -1,31 +1,31 @@
 var questionList = [
   {
-    question: "Commonly used data types DO NOT include:",
+    question: "1) Commonly used data types DO NOT include:",
     answers: ["strings", "booleans", "alerts", "numbers"],
     correctAnswer: 3
   },
   {
-    question: "The condition in an if / else statement is enclosed within ____.",
+    question: "2) The condition in an if / else statement is enclosed within ____.",
     answers: ["quotes", "curly brackets", "parentheses", "square brackets"],
     correctAnswer: 3
   },
   {
-    question: "Arrays in JavaScript can be used to store ____.",
+    question: "3) Arrays in JavaScript can be used to store ____.",
     answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
     correctAnswer: 4
   },
   {
-    question: "String values must be enclosed within ____ when being assigned to variables.",
+    question: "4) String values must be enclosed within ____ when being assigned to variables.",
     answers: ["commas", "curly brackets", "quotes", "parentheses"],
     correctAnswer: 3
   },
   {
-    question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    question: "5) A very useful tool used during development and debugging for printing content to the debugger is:",
     answers: ["JavaScript", "terminal / bash", "for loops", "console.log"],
     correctAnswer: 4
   },
   {
-    question: "Which of the following will check if the variable 'x' is equal in both value and type to the variable 'y'?",
+    question: "6) Which of the following will check if the variable 'x' is equal in both value and type to the variable 'y'?",
     answers: ["x = y", "x == y", "x === y", "x != y"],
     correctAnswer: 3
   }
@@ -52,6 +52,10 @@ var currentTime;
 var timerInterval;
 var resultTimeout;
 var scoreList;
+
+// sound effects
+var sfxRight = new Audio("assets/sfx/correct.wav");
+var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 /* Removes a component by ID by setting its display to 'none' */
 function hideID(id) {
