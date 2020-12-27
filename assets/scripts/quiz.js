@@ -67,7 +67,7 @@ function showID(id) {
   element.style.display = "";
 }
 
-/* Set initial state */
+/* Set the start of the quiz */
 function initializePage() {
   showID("start-page");
   hideID("question-page");
@@ -78,3 +78,43 @@ function initializePage() {
   timerDiv.style.visibility = "hidden";
 }
 
+/* Updates the question and answer text to the specified question index */
+function updateQuestion(qIdx) {
+  var questionText = document.getElementById("question-text");
+
+  if (qIdx < questionList.length) {
+    questionText.textContent = questionList[qIdx].question;
+
+    for (var i = 0; i < 4; i++) {
+      var answerText = document.getElementById("answer-btn-" + (i + 1));
+      answerText.textContent = (i + 1) + ". " + questionList[qIdx].answers[i];
+    }
+  }
+}
+
+/* changes the quiz to the final score page */
+function finishQuiz() {
+  var scoreDisplay = document.getElementById("final-score");
+  clearInterval(timerInterval);
+
+  hideID("question-page");
+  timerDiv.style.visibility = "hidden";
+  scoreDisplay.textContent = currentTime;
+  initialInput.value = "";
+  showID("complete-page");
+}
+
+/* Ends the quiz when the timer expires */
+function updateTimer(adjust) {
+  currentTime = currentTime + adjust > 0 ? currentTime + adjust : 0;
+  timeCounter.textContent = currentTime;
+
+  if (currentTime === 0) {
+    finishQuiz();
+  }
+}
+
+/* Gets high scores from local storage */
+function loadScores() {
+  scoreList = JSON.parse(localStorage.getItem("highScores")) || [];
+}
