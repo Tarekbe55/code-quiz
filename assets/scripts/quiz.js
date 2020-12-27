@@ -167,3 +167,34 @@ startBtn.addEventListener("click", function () {
   }, 1000);
 });
 
+/* Add listener to question answer buttons */
+answerBtnDiv.addEventListener("click", function (event) {
+  if (event.target.matches("button")) {
+    /* Check if answer is correct */
+    if (event.target.id === "answer-btn-" + questionList[currentQuestion].correctAnswer) {
+      resultText.textContent = "Correct!";
+    } else {
+      updateTimer(-10);
+      resultText.textContent = "Wrong!";
+    }
+    showID("result-block");
+
+    /* Hide result of previous question after 2 seconds */
+    clearTimeout(resultTimeout);
+    resultTimeout = setTimeout(function () {
+      hideID("result-block");
+    }, 2000);
+
+    /* Remove focus from button */
+    event.target.blur();
+
+    /* Moves to next question or finishes quiz on last question */
+    currentQuestion++;
+    if (currentQuestion < questionList.length) {
+      updateQuestion(currentQuestion);
+    } else {
+      finishQuiz();
+    }
+  }
+});
+
