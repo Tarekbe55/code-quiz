@@ -198,3 +198,10 @@ answerBtnDiv.addEventListener("click", function (event) {
   }
 });
 
+/* Add listener to View High Scores div to move directly to high score page */
+viewScoresDiv.addEventListener("click", function () {
+  hideID("start-page");
+  viewScoresDiv.style.visibility = "hidden";
+  showScores();
+})
+
