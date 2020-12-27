@@ -86,7 +86,32 @@
       </div>
     </section>
 
+    <!-- High Scores -->
+    <section id="high-score-page" style="display: none;">
+      <h1 class="text-center">High Scores</h1>
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+          <table id="score-table" class="table table-striped">
+            <tbody id="score-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+          <button id="return-btn" class="btn quiz-btn mb-1">Return</button>
+          <button id="clear-score-btn" class="btn quiz-btn mb-1">Clear Scores</button>
+        </div>
+      </div>
+    </section>
 
+    <!-- Result of previous answer choice -->
+    <div id="result-block" class="row justify-content-center" style="display: none;">
+      <div class="col-xs-8 col-sm-6 col-lg-4">
+        <hr />
+        <span id="result-text"></span>
+      </div>
+    </div>
   </main>
   <script src="assets/scripts/quiz.js"></script>
 </body>
